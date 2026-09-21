@@ -296,14 +296,78 @@ git push origin main
 
 ## Parcial 2 — Consumo de API (completar por el estudiante)
 
-**Nombre:** _________________________________ · **Carnet:** ______________
+**Nombre:** Miguel Angel Cruz Olmedo **Carnet: 27-2723-2025**
 
 ### Salida de consola (segunda ejecución)
 
 ```
-(pegue aquí la salida completa de la segunda ejecución de Main)
+"C:\Program Files\Java\jdk-24\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2026.2.0.1\lib\idea_rt.jar=54540" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath D:\ClienteInventario\target\classes;C:\Users\PC\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\PC\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;C:\Users\PC\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;C:\Users\PC\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar sv.edu.utec.Main
+Tabla producto lista.
+
+--- Inventario inicial ---
+ID    PRODUCTO                    CANTIDAD
+1     Essence Mascara Lash Princess         99
+2     Eyeshadow Palette with Mirror         34
+3     Powder Canister                   89
+4     Red Lipstick                      91
+5     Red Nail Polish                   79
+6     Calvin Klein CK One               29
+7     Chanel Coco Noir Eau De           58
+8     Dior J'adore                      98
+9     Dolce Shine Eau de                 4
+10    Gucci Bloom Eau de                91
+
+Respaldo generado en inventario.json
+Producto 2 actualizado.
+Producto 1 eliminado.
+
+--- Despues de los cambios ---
+ID    PRODUCTO                    CANTIDAD
+2     Monitor 24 pulgadas               12
+3     Powder Canister                   89
+4     Red Lipstick                      91
+5     Red Nail Polish                   79
+6     Calvin Klein CK One               29
+7     Chanel Coco Noir Eau De           58
+8     Dior J'adore                      98
+9     Dolce Shine Eau de                 4
+10    Gucci Bloom Eau de                91
+
+Registros restaurados desde JSON: 1
+
+--- Inventario final ---
+ID    PRODUCTO                    CANTIDAD
+1     Essence Mascara Lash Princess         99
+2     Monitor 24 pulgadas               12
+3     Powder Canister                   89
+4     Red Lipstick                      91
+5     Red Nail Polish                   79
+6     Calvin Klein CK One               29
+7     Chanel Coco Noir Eau De           58
+8     Dior J'adore                      98
+9     Dolce Shine Eau de                 4
+10    Gucci Bloom Eau de                91
+
+Sincronizacion con la API -> insertados: 0 | actualizados: 10
+
+--- Inventario sincronizado ---
+ID    PRODUCTO                    CANTIDAD
+1     Essence Mascara Lash Princess         99
+2     Eyeshadow Palette with Mirror         34
+3     Powder Canister                   89
+4     Red Lipstick                      91
+5     Red Nail Polish                   79
+6     Calvin Klein CK One               29
+7     Chanel Coco Noir Eau De           58
+8     Dior J'adore                      98
+9     Dolce Shine Eau de                 4
+10    Gucci Bloom Eau de                91
+
+Process finished with exit code 0
+
 ```
 
 ### Uso de inteligencia artificial
 
-(Declare si utilizó alguna herramienta de IA, cuál y para qué. Si no la utilizó, indíquelo.)
+* **Herramienta utilizada:** Gemini (Google).
+* **Finalidad:** Se utilizó como apoyo técnico para la comprensión y desglose de los requerimientos del examen, la estructuración de las clases de transferencia (DTOs) con anotaciones de Jackson (`@JsonIgnoreProperties`)[cite: 1], la configuración de la petición HTTP mediante el cliente nativo `HttpClient`[cite: 1] y la verificación de la lógica de idempotencia en `SincronizacionService`[cite: 1].
